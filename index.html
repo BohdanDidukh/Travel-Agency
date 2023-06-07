@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Travel Agency</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css?_v=20230604160726" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20230604160726">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__content">
+					<a href="" class="header__logo">Treelo</a>
+					<div class="header__menu menu">
+						<nav class="menu__body menu__wrapper">
+							<ul class=" menu__list">
+								<li class="menu__item"><a href="#review" class="menu__link scrol-to">Review</a></li>
+								<li class="menu__item"><a href="#tips" class="menu__link scrol-to">Tips</a></li>
+								<li class="menu__item"><a href="#alerts" class="menu__link scrol-to">Alerts</a></li>
+								<li class="menu__item"><a href="#blog" class="menu__link scrol-to">Blog</a></li>
+							</ul>
+						</nav>
+						<button type="button" class="menu__icon icon-menu btn"><span></span></button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page-main main-block">
+				<div class="main-block__container">
+					<div class="main-block__content">
+						<div class="main-block__title">Discover Your Life, Travel Where You Want</div>
+						<div class="main-block__subtitle">Would you explore natur paradise in the world, let’s find the best
+							destination in world with us.</div>
+					</div>
+					<div class="scroll-downs">
+						<div class="mousey">
+							<div class="scroller"></div>
+						</div>
+					</div>
+					<div class="main-block__search search">
+						<div class="search__wrapper">
+							<div class="search__choice choice">
+								<div class="choice__element active">
+									<img src="img/svg/airplane_deg.svg">
+									<button class="choice__flight">Flight</button>
+								</div>
+								<div class="choice__element">
+									<img src="img/svg/hotel.svg">
+									<button class="choice__hotel">Hotel</button>
+								</div>
+							</div>
+							<div class="search__travel-info travel-info">
+								<div class="travel-info__wrapper">
+									<div class="travel-info__text">
+										<div class="travel-info__description">Living From</div>
+										<div class="travel-info__data">Dubai</div>
+									</div>
+									<img class="travel-info__icon" src="img/svg/airplane_circle.svg">
+									<div class="travel-info__text">
+										<div class="travel-info__description">Going To</div>
+										<div class="travel-info__data">New York</div>
+									</div>
+								</div>
+								<div class="travel-info__wrapper">
+									<div class="travel-info__text">
+										<div class="travel-info__description">Leave
+											<img class="travel-info__description-icon" src="img/svg/airplane.svg">
+										</div>
+										<div class="travel-info__data">23 Jan, Sat</div>
+									</div>
+									<img class="travel-info__icon" src="img/svg/planner.svg">
+									<div class="travel-info__text">
+										<div class="travel-info__description">Return
+											<img class="travel-info__description-icon" src="img/svg/airplane_return.svg">
+										</div>
+										<div class="travel-info__data">14 Jan, Thu</div>
+									</div>
+								</div>
+								<div class="search__icon">
+									<img src="img/svg/search.svg">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="page-offers offers-block">
+				<div id="tips" class="offers-block__container">
+					<div class="offers-block__title title">Special Upcoming Offers</div>
+					<div class="offers-block__trip-type trip-type">
+						<div class="trip-type__wrapper">
+							<ul class="trip-type__nav">
+								<li>
+									<button class="trip-type__btn btn btn-small trip__btn-active" data-translate-value="0" data-filter-trip="team">
+										Team
+									</button>
+								</li>
+								<li>
+									<button class="trip-type__btn btn btn-small" data-translate-value="100%" data-filter-trip="couple">
+										Couple
+									</button>
+								</li>
+								<li>
+									<button class="trip-type__btn btn btn-small" data-translate-value="200%" data-filter-trip="family">
+										Family
+									</button>
+								</li>
+							</ul>
+							<div class="trip-type__slider" aria-hidden="true">
+								<div class="trip-type__slider-rect">&nbsp;</div>
+							</div>
+						</div>
+					</div>
+					<div class="offers-block__tour tour">
+						<div data-type="team" class="tour__card">
+							<div class="tour__head">
+								<picture><source srcset="img/offers/offer_1.webp" type="image/webp"><img class="tour__img" src="img/offers/offer_1.jpg"></picture>
+								<div class="tour__date">14 FEB 2022</div>
+							</div>
+							<div class="tour__body">
+								<div class="tour__description">
+									<div class="tour__type-relax">Relax</div>
+									<div class="tour__duration">3 Days, 3 Nights</div>
+								</div>
+								<div class="tour__place-name">Loga Sea</div>
+								<div class="tour__book">
+									<div class="tour__price">700$<span>/Person</span></div>
+									<button class="tour__book-btn btn btn-small">Book Now</button>
+								</div>
+							</div>
+						</div>
+						<div data-type="team" class="tour__card">
+							<div class="tour__head">
+								<picture><source srcset="img/offers/offer_2.webp" type="image/webp"><img class="tour__img" src="img/offers/offer_2.jpg"></picture>
+								<div class="tour__date">18 JUN 2022</div>
+							</div>
+							<div class="tour__body">
+								<div class="tour__description">
+									<div class="tour__type-adventure">Adventure</div>
+									<div class="tour__duration">4 Days, 3 Nights</div>
+								</div>
+								<div class="tour__place-name">Ansgar Scheffold</div>
+								<div class="tour__book">
+									<div class="tour__price">400$<span>/Person</span></div>
+									<button class="tour__book-btn btn btn-small">Book Now</button>
+								</div>
+							</div>
+						</div>
+						<div data-type="team" class="tour__card">
+							<div class="tour__head">
+								<picture><source srcset="img/offers/offer_3.webp" type="image/webp"><img class="tour__img" src="img/offers/offer_3.jpg"></picture>
+								<div class="tour__date">22 DEC 2022</div>
+							</div>
+							<div class="tour__body">
+								<div class="tour__description">
+									<div class="tour__type-relax">Relax</div>
+									<div class="tour__duration">7 Days, 6 Nights</div>
+								</div>
+								<div class="tour__place-name">Lona X</div>
+								<div class="tour__book">
+									<div class="tour__price">340$<span>/Person</span></div>
+									<button class="tour__book-btn btn btn-small">Book Now</button>
+								</div>
+							</div>
+						</div>
+						<div data-type="couple" class="tour__card hide">
+							<div class="tour__head">
+								<picture><source srcset="img/offers/offer_4.webp" type="image/webp"><img class="tour__img" src="img/offers/offer_4.jpg"></picture>
+								<div class="tour__date">8 FEB 2022</div>
+							</div>
+							<div class="tour__body">
+								<div class="tour__description">
+									<div class="tour__type-adventure">Adventure</div>
+									<div class="tour__duration">5 Days, 4 Nights</div>
+								</div>
+								<div class="tour__place-name">Marcu</div>
+								<div class="tour__book">
+									<div class="tour__price">700$<span>/Person</span></div>
+									<button class="tour__book-btn btn btn-small">Book Now</button>
+								</div>
+							</div>
+						</div>
+						<div data-type="couple" class="tour__card hide">
+							<div class="tour__head">
+								<picture><source srcset="img/offers/offer_5.webp" type="image/webp"><img class="tour__img" src="img/offers/offer_5.jpg"></picture>
+								<div class="tour__date">18 DEC 2022</div>
+							</div>
+							<div class="tour__body">
+								<div class="tour__description">
+									<div class="tour__type-adventure">Adventure</div>
+									<div class="tour__duration">2 Days, 2 Nights</div>
+								</div>
+								<div class="tour__place-name">Lukeman</div>
+								<div class="tour__book">
+									<div class="tour__price">300$<span>/Person</span></div>
+									<button class="tour__book-btn btn btn-small">Book Now</button>
+								</div>
+							</div>
+						</div>
+						<div data-type="couple" class="tour__card hide">
+							<div class="tour__head">
+								<picture><source srcset="img/offers/offer_6.webp" type="image/webp"><img class="tour__img" src="img/offers/offer_6.jpg"></picture>
+								<div class="tour__date">22 JUN 2022</div>
+							</div>
+							<div class="tour__body">
+								<div class="tour__description">
+									<div class="tour__type-relax">Relax</div>
+									<div class="tour__duration">7 Days, 7 Nights</div>
+								</div>
+								<div class="tour__place-name">Sesler</div>
+								<div class="tour__book">
+									<div class="tour__price">400$<span>/Person</span></div>
+									<button class="tour__book-btn btn btn-small">Book Now</button>
+								</div>
+							</div>
+						</div>
+						<div data-type="family" class="tour__card hide">
+							<div class="tour__head">
+								<picture><source srcset="img/offers/offer_7.webp" type="image/webp"><img class="tour__img" src="img/offers/offer_7.jpg"></picture>
+								<div class="tour__date">10 JUN 2022</div>
+							</div>
+							<div class="tour__body">
+								<div class="tour__description">
+									<div class="tour__type-relax">Relax</div>
+									<div class="tour__duration">4 Days, 3 Nights</div>
+								</div>
+								<div class="tour__place-name">Szmigiel</div>
+								<div class="tour__book">
+									<div class="tour__price">550$<span>/Person</span></div>
+									<button class="tour__book-btn btn btn-small">Book Now</button>
+								</div>
+							</div>
+						</div>
+						<div data-type="family" class="tour__card hide">
+							<div class="tour__head">
+								<picture><source srcset="img/offers/offer_8.webp" type="image/webp"><img class="tour__img" src="img/offers/offer_8.jpg"></picture>
+								<div class="tour__date">28 JUN 2022</div>
+							</div>
+							<div class="tour__body">
+								<div class="tour__description">
+									<div class="tour__type-adventure">Adventure</div>
+									<div class="tour__duration">3 Days, 2 Nights</div>
+								</div>
+								<div class="tour__place-name">Shifaaz Shamoon</div>
+								<div class="tour__book">
+									<div class="tour__price">350$<span>/Person</span></div>
+									<button class="tour__book-btn btn btn-small">Book Now</button>
+								</div>
+							</div>
+						</div>
+						<div data-type="family" class="tour__card hide">
+							<div class="tour__head">
+								<picture><source srcset="img/offers/offer_9.webp" type="image/webp"><img class="tour__img" src="img/offers/offer_9.jpg"></picture>
+								<div class="tour__date">29 DEC 2022</div>
+							</div>
+							<div class="tour__body">
+								<div class="tour__description">
+									<div class="tour__type-adventure">Adventure</div>
+									<div class="tour__duration">6 Days, 6 Nights</div>
+								</div>
+								<div class="tour__place-name">Joel Vodell</div>
+								<div class="tour__book">
+									<div class="tour__price">390$<span>/Person</span></div>
+									<button class="tour__book-btn btn btn-small">Book Now</button>
+								</div>
+							</div>
+						</div>
+						<div data-type="family" class="tour__card hide">
+							<div class="tour__head">
+								<picture><source srcset="img/offers/offer_10.webp" type="image/webp"><img class="tour__img" src="img/offers/offer_10.jpg"></picture>
+								<div class="tour__date">21 JUN 2022</div>
+							</div>
+							<div class="tour__body">
+								<div class="tour__description">
+									<div class="tour__type-relax">Relax</div>
+									<div class="tour__duration">3 Days, 3 Nights</div>
+								</div>
+								<div class="tour__place-name">Quino Al</div>
+								<div class="tour__book">
+									<div class="tour__price">400$<span>/Person</span></div>
+									<button class="tour__book-btn btn btn-small">Book Now</button>
+								</div>
+							</div>
+						</div>
+						<div data-type="family" class="tour__card hide">
+							<div class="tour__head">
+								<picture><source srcset="img/offers/offer_11.webp" type="image/webp"><img class="tour__img" src="img/offers/offer_11.jpg"></picture>
+								<div class="tour__date">19 JUN 2022</div>
+							</div>
+							<div class="tour__body">
+								<div class="tour__description">
+									<div class="tour__type-relax">Relax</div>
+									<div class="tour__duration">7 Days, 7 Nights</div>
+								</div>
+								<div class="tour__place-name">Daneil Roe</div>
+								<div class="tour__book">
+									<div class="tour__price">800$<span>/Person</span></div>
+									<button class="tour__book-btn btn btn-small">Book Now</button>
+								</div>
+							</div>
+						</div>
+						<div data-type="family" class="tour__card hide">
+							<div class="tour__head">
+								<picture><source srcset="img/offers/offer_12.webp" type="image/webp"><img class="tour__img" src="img/offers/offer_12.jpg"></picture>
+								<div class="tour__date">24 FEB 2022</div>
+							</div>
+							<div class="tour__body">
+								<div class="tour__description">
+									<div class="tour__type-adventure">Adventure</div>
+									<div class="tour__duration">4 Days, 3 Nights</div>
+								</div>
+								<div class="tour__place-name">Furlan</div>
+								<div class="tour__book">
+									<div class="tour__price">450$<span>/Person</span></div>
+									<button class="tour__book-btn btn btn-small">Book Now</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section id="blog" class="page-blog blog-block">
+				<div class="blog-block__container">
+					<div class="blog-block__img-block">
+						<div class="blog-block__features features__destinations">
+							<div><span>300+</span>DESTINATIONS</div>
+						</div>
+						<div class="blog-block__features features__tourists">
+							<div><span>5000+</span>TOURISTS</div>
+						</div>
+						<div class="blog-block__features features__hotels">
+							<div><span>150+</span>HOTELS</div>
+						</div>
+						<picture><source srcset="img/blog.webp" type="image/webp"><img class="blog-block__img" src="img/blog.jpg"></picture>
+					</div>
+					<div class="blog-block__info">
+						<div class="blog-block__title title">Travel Any Corner of The World With Us</div>
+						<div class="blog-block__text">
+							Would you explore nature paradise in the world, let’s find the best
+							destination in world with us, Would you explore
+							nature paradise in the world, let’s find the best destination in world with us. Would you
+							explore
+							nature paradise in the world, let’s find the best destination in world with us.</br></br>
+							Would you explore nature paradise in the world, let’s find the best destination in world with
+							us.
+						</div>
+						<button class="blog-block__btn btn btn-big">Contact Us</button>
+					</div>
+				</div>
+			</section>
+
+
+			<section id="alerts" class="page-destination destination-block">
+				<div class="destination-block__container">
+					<div class="destination-block__title title">Recommended Destination</div>
+					<div class="destination-block__content">
+						<div class="destination-block__destination-type destination-type">
+							<div class="destination-type__wrapper">
+								<ul class="destination-type__nav">
+									<li>
+										<button class="destination-type__btn btn btn-small description__btn-active" data-translate-value="0" data-filter-destination="popular">
+											Popular
+										</button>
+									</li>
+									<li>
+										<button class="destination-type__btn btn btn-small" data-translate-value="100%" data-filter-destination="adventure">
+											Adventure
+										</button>
+									</li>
+									<li>
+										<button class="destination-type__btn btn btn-small" data-translate-value="200%" data-filter-destination="beath">
+											Beath
+										</button>
+									</li>
+								</ul>
+								<div class="destination-type__slider" aria-hidden="true">
+									<div class="destination-type__slider-rect">&nbsp;</div>
+								</div>
+							</div>
+						</div>
+						<div class="destination-block__place place">
+							<div data-cat="popular" class="place__card">
+								<div class="place__head">
+									<picture><source srcset="img/destination/destination_1.webp" type="image/webp"><img class="place__img" src="img/destination/destination_1.jpg"></picture>
+									<div class="place__rating rating">3.4</div>
+								</div>
+								<div class="place__body">
+									<div class="place__name">Kina Mountain</div>
+									<div class="place__location">Cambodia</div>
+								</div>
+							</div>
+							<div data-cat="popular" class="place__card">
+								<div class="place__head">
+									<picture><source srcset="img/destination/destination_2.webp" type="image/webp"><img class="place__img" src="img/destination/destination_2.jpg"></picture>
+									<div class="place__rating rating">4.5</div>
+								</div>
+								<div class="place__body">
+									<div class="place__name">Kina Mountain</div>
+									<div class="place__location">Cambodia</div>
+								</div>
+							</div>
+							<div data-cat="popular" class="place__card">
+								<div class="place__head">
+									<picture><source srcset="img/destination/destination_3.webp" type="image/webp"><img class="place__img" src="img/destination/destination_3.jpg"></picture>
+									<div class="place__rating rating">4.2</div>
+								</div>
+								<div class="place__body">
+									<div class="place__name">Kina Mountain</div>
+									<div class="place__location">Cambodia</div>
+								</div>
+							</div>
+							<div data-cat="popular" class="place__card">
+								<div class="place__head">
+									<picture><source srcset="img/destination/destination_4.webp" type="image/webp"><img class="place__img" src="img/destination/destination_4.jpg"></picture>
+									<div class="place__rating rating">3.5</div>
+								</div>
+								<div class="place__body">
+									<div class="place__name">Kina Mountain</div>
+									<div class="place__location">Cambodia</div>
+								</div>
+							</div>
+							<div data-cat="adventure" class="place__card hide">
+								<div class="place__head">
+									<picture><source srcset="img/destination/destination_5.webp" type="image/webp"><img class="place__img" src="img/destination/destination_5.jpg"></picture>
+									<div class="place__rating rating">4.2</div>
+								</div>
+								<div class="place__body">
+									<div class="place__name">Kina Mountain</div>
+									<div class="place__location">Cambodia</div>
+								</div>
+							</div>
+							<div data-cat="adventure" class="place__card hide">
+								<div class="place__head">
+									<picture><source srcset="img/destination/destination_6.webp" type="image/webp"><img class="place__img" src="img/destination/destination_6.jpg"></picture>
+									<div class="place__rating rating">4.3</div>
+								</div>
+								<div class="place__body">
+									<div class="place__name">Kina Mountain</div>
+									<div class="place__location">Cambodia</div>
+								</div>
+							</div>
+							<div data-cat="adventure" class="place__card hide">
+								<div class="place__head">
+									<picture><source srcset="img/destination/destination_7.webp" type="image/webp"><img class="place__img" src="img/destination/destination_7.jpg"></picture>
+									<div class="place__rating rating">3.7</div>
+								</div>
+								<div class="place__body">
+									<div class="place__name">Kina Mountain</div>
+									<div class="place__location">Cambodia</div>
+								</div>
+							</div>
+							<div data-cat="adventure" class="place__card hide">
+								<div class="place__head">
+									<picture><source srcset="img/destination/destination_8.webp" type="image/webp"><img class="place__img" src="img/destination/destination_8.jpg"></picture>
+									<div class="place__rating rating">4.9</div>
+								</div>
+								<div class="place__body">
+									<div class="place__name">Kina Mountain</div>
+									<div class="place__location">Cambodia</div>
+								</div>
+							</div>
+							<div data-cat="beath" class="place__card hide">
+								<div class="place__head">
+									<picture><source srcset="img/destination/destination_9.webp" type="image/webp"><img class="place__img" src="img/destination/destination_9.jpg"></picture>
+									<div class="place__rating rating">3.8</div>
+								</div>
+								<div class="place__body">
+									<div class="place__name">Kina Mountain</div>
+									<div class="place__location">Cambodia</div>
+								</div>
+							</div>
+							<div data-cat="beath" class="place__card hide">
+								<div class="place__head">
+									<picture><source srcset="img/destination/destination_10.webp" type="image/webp"><img class="place__img" src="img/destination/destination_10.jpg"></picture>
+									<div class="place__rating rating">3.5</div>
+								</div>
+								<div class="place__body">
+									<div class="place__name">Kina Mountain</div>
+									<div class="place__location">Cambodia</div>
+								</div>
+							</div>
+							<div data-cat="beath" class="place__card hide">
+								<div class="place__head">
+									<picture><source srcset="img/destination/destination_11.webp" type="image/webp"><img class="place__img" src="img/destination/destination_11.jpg"></picture>
+									<div class="place__rating rating">4.1</div>
+								</div>
+								<div class="place__body">
+									<div class="place__name">Kina Mountain</div>
+									<div class="place__location">Cambodia</div>
+								</div>
+							</div>
+							<div data-cat="beath" class="place__card hide">
+								<div class="place__head">
+									<picture><source srcset="img/destination/destination_12.webp" type="image/webp"><img class="place__img" src="img/destination/destination_12.jpg"></picture>
+									<div class="place__rating rating">3.9</div>
+								</div>
+								<div class="place__body">
+									<div class="place__name">Kina Mountain</div>
+									<div class="place__location">Cambodia</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section id="review" class="page-comments comments-block">
+				<div class="comments-block__container">
+					<div class="comments-block__slider slider">
+						<div class="slider__wrapper">
+							<div class="slider__item comments-block__comment comment">
+								<div class="comment__wrapper">
+									<img class="comment__quotes" src="img/svg/quotes.svg">
+									<div class="comment__text">Our trip to Morocco was truly a onece in a lifetime experience and
+										we
+										are so grateful to everyone that made it happen
+										seamlessly. Our travel planner, Jaouad, was increadible.</div>
+									<div class="comment__commentator-name">-Vand D</div>
+									<div class="comment__web-site">Happy Treloo</div>
+									<div class="comment__commentator">
+										<div class="comment__rating rating">4.5</div>
+										<picture><source srcset="img/review/review_img_1.webp" type="image/webp"><img class="comment__commentator-img" src="img/review/review_img_1.jpg"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="slider__item comments-block__comment comment">
+								<div class="comment__wrapper">
+									<img class="comment__quotes" src="img/svg/quotes.svg">
+									<div class="comment__text">Our trip to Morocco was truly a onece in a lifetime experience and
+										we
+										are so grateful to everyone that made it happen
+										seamlessly. Our travel planner, Jaouad, was increadible.</div>
+									<div class="comment__commentator-name">-Vand D</div>
+									<div class="comment__web-site">Happy Treloo</div>
+									<div class="comment__commentator">
+										<div class="comment__rating rating">4.5</div>
+										<picture><source srcset="img/review/review_img_2.webp" type="image/webp"><img class="comment__commentator-img" src="img/review/review_img_2.jpg"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="slider__item comments-block__comment comment">
+								<div class="comment__wrapper">
+									<img class="comment__quotes" src="img/svg/quotes.svg">
+									<div class="comment__text">Our trip to Morocco was truly a onece in a lifetime experience and
+										we
+										are so grateful to everyone that made it happen
+										seamlessly. Our travel planner, Jaouad, was increadible.</div>
+									<div class="comment__commentator-name">-Vand D</div>
+									<div class="comment__web-site">Happy Treloo</div>
+									<div class="comment__commentator">
+										<div class="comment__rating rating">4.5</div>
+										<picture><source srcset="img/review/review_img_3.webp" type="image/webp"><img class="comment__commentator-img" src="img/review/review_img_3.jpg"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="slider__item comments-block__comment comment">
+								<div class="comment__wrapper">
+									<img class="comment__quotes" src="img/svg/quotes.svg">
+									<div class="comment__text">Our trip to Morocco was truly a onece in a lifetime experience and
+										we
+										are so grateful to everyone that made it happen
+										seamlessly. Our travel planner, Jaouad, was increadible.</div>
+									<div class="comment__commentator-name">-Vand D</div>
+									<div class="comment__web-site">Happy Treloo</div>
+									<div class="comment__commentator">
+										<div class="comment__rating rating">4.5</div>
+										<picture><source srcset="img/review/review_img_4.webp" type="image/webp"><img class="comment__commentator-img" src="img/review/review_img_4.jpg"></picture>
+									</div>
+								</div>
+							</div>
+							<div class="slider__item comments-block__comment comment">
+								<div class="comment__wrapper">
+									<img class="comment__quotes" src="img/svg/quotes.svg">
+									<div class="comment__text">Our trip to Morocco was truly a onece in a lifetime experience and
+										we
+										are so grateful to everyone that made it happen
+										seamlessly. Our travel planner, Jaouad, was increadible.</div>
+									<div class="comment__commentator-name">-Vand D</div>
+									<div class="comment__web-site">Happy Treloo</div>
+									<div class="comment__commentator">
+										<div class="comment__rating rating">4.5</div>
+										<picture><source srcset="img/review/review_img_5.webp" type="image/webp"><img class="comment__commentator-img" src="img/review/review_img_5.jpg"></picture>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slider__buttons"></div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="page-discount discount-block">
+				<div class="discount-block__container">
+					<div class="discount-block__content">
+						<div class="discount-block__title title">Don’t Miss The 50% Discount if You register Today</div>
+						<button class="discount-block__btn btn-big btn">Register Today</button>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__rights">© 2020 Enver, All Rights Reserved</div>
+					<div class="footer__menu">
+						<nav class="footer-menu__body menu__wrapper">
+							<ul class="footer-menu__list">
+								<li class="footer-menu__item"><a href="#review" class="footer-menu__link">Review</a></li>
+								<li class="footer-menu__item"><a href="#tips" class="footer-menu__link">Tips</a></li>
+								<li class="footer-menu__item"><a href="#alerts" class="footer-menu__link">Alerts</a></li>
+								<li class="footer-menu__item"><a href="#blog" class="footer-menu__link">Blog</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js?_v=20230604160726"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js?_v=20230604160726"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js?_v=20230604160726"></script>
+	<script src="js/app.min.js?_v=20230604160726"></script>
+</body>
+
+</html>
