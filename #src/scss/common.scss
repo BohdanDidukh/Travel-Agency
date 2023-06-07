@@ -1,0 +1,60 @@
+.title {
+  font-weight: 600;
+  @include adaptiveValue("font-size", 48, 36);
+  line-height: math.div(72, 48);
+  text-align: center;
+  color: $mainColor;
+}
+.btn-big {
+  @include adaptiveValue("padding-top", 22, 16);
+  @include adaptiveValue("padding-right", 34, 24);
+  @include adaptiveValue("padding-bottom", 22, 16);
+  @include adaptiveValue("padding-left", 34, 24);
+  padding: rem(22) rem(34);
+  @include adaptiveValue("font-size", 20, 14);
+  line-height: math.div(30, 20);
+  filter: drop-shadow(4px 8px 25px rgba(62, 134, 245, 0.25));
+}
+.btn-small {
+  @include adaptiveValue("padding-top", 10, 6);
+  @include adaptiveValue("padding-right", 23, 10);
+  @include adaptiveValue("padding-bottom", 10, 6);
+  @include adaptiveValue("padding-left", 23, 10);
+  @include adaptiveValue(" font-size", 18, 16);
+  line-height: math.div(27, 18);
+  color: $secondaryTextColor;
+}
+.btn {
+  font-weight: 500;
+  border-radius: rem(10);
+  -webkit-tap-highlight-color: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+.rating {
+  position: absolute;
+  z-index: 3;
+  width: rem(55);
+  height: rem(20);
+  font-weight: 500;
+  font-size: rem(12);
+  line-height: math.div(20, 12);
+  text-align: center;
+  color: $mainColor;
+  background: $mainLightColor;
+  border-radius: rem(25);
+  &::before {
+    content: url(@img/svg/star.svg);
+    padding-right: rem(3);
+    vertical-align: middle;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,174 @@
+//====================================================================================================
+.header {
+  margin-bottom: rem(-96);
+  position: relative;
+  z-index: 3;
+  // .header__container
+  &__container {
+    position: relative;
+  }
+
+  // .header__content
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: rem(24);
+  }
+
+  // .header__logo
+
+  &__logo {
+    font-weight: 500;
+    @include adaptiveValue("font-size", 48, 28);
+    line-height: math.div(72, 48);
+    color: $mainLightColor;
+  }
+}
+.menu {
+  // .menu__icon
+
+  &__icon {
+  }
+
+  // .menu__body
+
+  &__body {
+    @media (max-width: $mobile) {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: -100%;
+      transition: all 0.3s ease 0s;
+      overflow: hidden;
+      z-index: 2;
+      background-image: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(@img/cover.jpeg);
+      background-position: center center;
+      background-size: cover;
+      &::before {
+        display: none;
+        content: "";
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        @include adaptiveValue("height", 140, 100, 768, 320, 2);
+        color: none;
+        background: none;
+        backdrop-filter: blur(4px);
+      }
+    }
+    .menu-open & {
+      left: 0;
+      &::before {
+        left: 0;
+      }
+    }
+  }
+
+  // .menu__list
+
+  &__list {
+    display: flex;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      column-gap: rem(35);
+      text-align: center;
+      height: 100%;
+      @include adaptiveValue("padding-top", 180, 100);
+    }
+  }
+
+  // .menu__item
+
+  &__item {
+    font-family: "Poppins";
+    font-weight: 500;
+    color: $mainLightColor;
+    font-size: rem(24);
+    line-height: math.div(36, 24);
+    padding: rem(15) rem(25);
+    border-radius: rem(15);
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $mainLightColor;
+      color: $primaryBlue;
+      @media (max-width: $mobile) {
+        background: none;
+        color: $mainLightColor;
+      }
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(50);
+    }
+  }
+  // .menu__link
+
+  &__link {
+    position: relative;
+  }
+}
+.icon-menu {
+  margin-left: rem(20);
+}
+//====================================================================================================
+
+//Burger
+.icon-menu {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      height: rem(2);
+      background-color: #fff;
+    }
+    &::before {
+      top: 0;
+      width: rem(20);
+    }
+    &::after {
+      bottom: 0;
+      width: rem(10);
+    }
+    span {
+      width: rem(15);
+      top: calc(50% - rem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+        width: 100%;
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

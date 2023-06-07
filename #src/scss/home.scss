@@ -1,0 +1,972 @@
+//MAIN PAGE
+.page-main {
+}
+.main-block {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(@img/cover.jpeg);
+  background-position: center center;
+  background-size: cover;
+  height: rem(850);
+  margin: auto;
+
+  // .main-block__container
+
+  &__container {
+    position: relative;
+    height :100%;
+  }
+
+  // .main-block__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include adaptiveValue("padding-top", 260, 200);
+    text-align: center;
+    color: $mainLightColor;
+  }
+
+  // .main-block__title
+
+  &__title {
+    max-width: rem(820);
+    padding-top: rem(40);
+    font-weight: 600;
+    @include adaptiveValue("font-size", 64, 32);
+    line-height: math.div(96, 64);
+  }
+
+  // .main-block__subtitle
+
+  &__subtitle {
+    max-width: rem(785);
+    font-weight: 500;
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: math.div(48, 24);
+    @include adaptiveValue("padding-top", 40, 30);
+  }
+  // .main-block__search
+
+  &__search {
+    display: none;
+    padding-top: rem(165);
+  }
+}
+.search {
+  position: absolute;
+
+  // .search__wrapper
+
+  &__wrapper {
+    position: relative;
+  }
+
+  // .search__info
+
+  &__travel-info {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: rem(30);
+    margin-right: rem(30);
+    @include adaptiveValue("width", 1180, 280);
+    min-height: rem(274);
+    top: 99px;
+    background: $mainLightColor;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 50px 50px 50px;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: rem(20);
+      padding: rem(20) 0;
+    }
+  }
+
+  // .saerch__choice
+
+  &__choice {
+    position: absolute;
+    z-index: 2;
+    width: куЬ(279);
+    height: rem(100);
+    background: $mainLightColor;
+    border-radius: 25px 25px 0px 0px;
+  }
+  // .saerch__icon
+
+  &__icon {
+    display: flex;
+    @include adaptiveValue("width", 154, 30);
+    @include adaptiveValue("height", 154, 30);
+    background-color: $primaryBlue;
+    @include adaptiveValue("border-radius", 65, 20);
+    img {
+      margin: auto;
+      @include adaptiveValue("width", 50, 30);
+      @include adaptiveValue("height", 55, 30);
+    }
+  }
+}
+.choice {
+  display: flex;
+  justify-content: space-between;
+
+  // .choice__element
+
+  &__element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: rem(10) auto rem(24) rem(10);
+    padding: rem(15) rem(18);
+    text-align: center;
+
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: math.div(27, 18);
+    color: $mainColor;
+    border-radius: rem(25);
+  }
+  // .choice__flight
+
+  &__flight {
+    background: none;
+  }
+
+  // .choice__hotel
+
+  &__hotel {
+    padding-left: 4px;
+    background: none;
+  }
+  .active {
+    background-color: rgba(62, 134, 245, 0.2);
+  }
+}
+.travel-info {
+  // .travel-info__wrapper
+  padding-left: rem(15);
+  padding-right: rem(15);
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    @include adaptiveValue("padding-top", 44, 28);
+    @include adaptiveValue("padding-right", 22.5, 16);
+    @include adaptiveValue("padding-bottom", 44, 28);
+    @include adaptiveValue("padding-left", 22.5, 16);
+    border: rem(2) solid rgba(172, 172, 172, 0.5);
+    border-radius: rem(25);
+    gap: rem(20);
+  }
+
+  // .travel-info__text
+
+  &__text {
+    font-weight: 500;
+  }
+
+  // .travel-info__description
+
+  &__description {
+    padding-bottom: rem(4);
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: math.div(27, 18);
+    color: $secondaryTextColor;
+  }
+  // .travel-info__description-icon
+
+  &__description-icon {
+    padding: 0 rem(8);
+  }
+  // .travel-info__data
+
+  &__data {
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: math.div(36, 24);
+    color: $mainColor;
+  }
+
+  // .travel-info__icon
+
+  &__icon {
+  }
+}
+
+.scroll-downs {
+  position: absolute;
+  bottom: rem(50);
+  left: 0;
+  right: 0;
+  margin: auto;
+  width :rem(35);
+  height: rem(55);
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+
+// PAGE OFFERS
+.page-offers {
+  //padding-top: rem(370);
+  padding-top: rem(120);
+  background-color: $backgroundColor;
+}
+.offers-block {
+  padding-bottom: rem(160);
+  // .offers-block__container
+
+  &__container {
+  }
+
+  // .offers-block__title
+
+  &__title {
+    padding-bottom: rem(60);
+  }
+
+  // .offers-block__trip-type
+
+  &__trip-type {
+    margin: auto;
+    margin-bottom: rem(40);
+    .btn-active {
+      background-color: $primaryBlue;
+      color: $mainLightColor;
+    }
+  }
+
+  // .offers-block__tour
+
+  &__tour {
+  }
+}
+.trip-type {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @include adaptiveValue("width", 350, 260);
+  @include adaptiveValue("height", 66, 50);
+  background: $mainLightColor;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.05);
+  border-radius: rem(10);
+
+  // .trip-type__wrapper
+  &__wrapper {
+    width: 100%;
+    margin: 0 rem(10);
+    position: relative;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
+    ul {
+      list-style-type: none;
+      display: flex;
+    }
+  }
+
+  // .trip-type__nav
+
+  &__nav {
+    overflow: hidden;
+    li {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex: 1 1 100%;
+    }
+  }
+
+  // .trip-type__btn
+  &__btn {
+    flex-grow: 1;
+  }
+  &__btn.trip__btn-active {
+    transition: color 0.4s ease-in-out;
+    color: $mainLightColor;
+  }
+
+  // .trip-type__slider
+
+  &__slider {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  // .trip-type__slider-rect
+  :root {
+    --translate-offers-filters-slider: 0;
+  }
+  &__slider-rect {
+    @include adaptiveValue("height", 46, 35);
+    width: 33.33%;
+    border-radius: rem(10);
+    background-color: $primaryBlue;
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(var(--translate-offers-filters-slider));
+  }
+}
+.tour {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  gap: rem(20);
+  .hide {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+  // .tour__card
+
+  &__card {
+    @include adaptiveValue("width", 380, 280);
+    background: $mainLightColor;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.05);
+    border-radius: rem(50);
+    animation: 1s ease-in-out fadeIn;
+  }
+
+  // .tour__head
+
+  &__head {
+    display: flex;
+    padding-top: rem(21);
+  }
+
+  // .tour__img
+
+  &__img {
+    @include adaptiveValue("margin-left", 27, 15);
+    @include adaptiveValue("width", 293, 220);
+  }
+
+  // .tour__date
+
+  &__date {
+    font-weight: 500;
+    @include adaptiveValue("font-size", 18, 14);
+    line-height: math.div(27, 18);
+    letter-spacing: 0.5em;
+    @include adaptiveValue("padding-left", 20, 6);
+    writing-mode: vertical-rl;
+    color: $secondaryTextColor;
+    text-align: center;
+  }
+
+  // .tour__body
+
+  &__body {
+    margin: auto;
+    @include adaptiveValue("padding-bottom", 30, 15);
+    padding-top: rem(18);
+    @include adaptiveValue("width", 300, 200);
+  }
+
+  // .tour__description
+
+  &__description {
+    display: flex;
+    font-weight: 500;
+    @include adaptiveValue("font-size", 14, 12);
+    line-height: math.div(21, 14);
+  }
+
+  // .tour__type-relax
+
+  &__type-relax {
+    padding: 0 rem(15);
+    color: #f178b6;
+    background: $primaryActive;
+    border-radius: rem(100);
+  }
+
+  // .tour__type-adventure
+
+  &__type-adventure {
+    padding: 0 rem(15);
+    color: #7879f1;
+    background: #f1f1fd;
+    border-radius: rem(100);
+  }
+
+  // .tour__duration
+
+  &__duration {
+    padding-left: rem(12);
+    color: $secondaryTextColor;
+  }
+
+  // .tour__place-name
+
+  &__place-name {
+    padding: rem(10) 0;
+    font-weight: 600;
+    @include adaptiveValue("font-size", 24, 22);
+    line-height: math.div(36, 24);
+  }
+
+  // .tour__book
+
+  &__book {
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: 500;
+    @media (max-width: $mobile) {
+      display: block;
+    }
+  }
+
+  // .tour__price
+
+  &__price {
+    @include adaptiveValue("font-size", 24, 20);
+    line-height: math.div(36, 24);
+    color: $mainColor;
+    span {
+      font-size: rem(18);
+      line-height: math.div(27, 18);
+      color: $secondaryTextColor;
+    }
+  }
+
+  // .tour__btn
+
+  &__book-btn {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: math.div(21, 14);
+    color: $primaryBlue;
+    background-color: #f2f6ff;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.2);
+    }
+    @media (max-width: $mobile) {
+      margin: auto;
+      margin-top: rem(15);
+    }
+  }
+}
+
+//PAGE ABOUT
+.page-blog {
+  background-color: $backgroundColor;
+  padding-bottom: rem(80);
+}
+.blog-block {
+  // .blog-block__container
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(120);
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+      gap: rem(50);
+    }
+  }
+
+  // .blog-block__img-block
+
+  &__img-block {
+    width: auto;
+    position: relative;
+  }
+
+  // .blog-block__img
+
+  &__img {
+    @include adaptiveValue("width", 480, 240);
+    @include adaptiveValue("height", 800, 360);
+    border-radius: rem(75);
+  }
+
+  // .blog-block__features
+
+  &__features {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include adaptiveValue("width", 180, 100);
+    @include adaptiveValue("height", 120, 60);
+
+    font-weight: 300;
+    @include adaptiveValue("font-size", 18, 10);
+    line-height: math.div(27, 18);
+    color: $mainColor;
+    background: $mainLightColor;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    border-radius: rem(35);
+    span {
+      display: block;
+      font-weight: 600;
+      @include adaptiveValue("font-size", 36, 16);
+      line-height: math.div(54, 36);
+      color: $primaryBlue;
+    }
+  }
+
+  // .blog-block__info
+
+  &__info {
+    width: rem(580);
+    @media (max-width: $tablet) {
+      @include adaptiveValue("width", 880, 260);
+    }
+  }
+
+  // .blog-block__title
+
+  &__title {
+    text-align: left;
+    padding-bottom: rem(20);
+  }
+
+  // .blog-block__text
+
+  &__text {
+    font-weight: 400;
+    @include adaptiveValue("font-size", 20, 16);
+    line-height: 200%;
+    color: $secondaryTextColor;
+  }
+
+  // .blog-block__btn
+
+  &__btn {
+    margin-top: rem(20);
+    background: $primaryBlue;
+    color: $mainLightColor;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+.features {
+  // .features__destinations
+
+  &__destinations {
+    @include adaptiveValue("top", 56, 30);
+    @include adaptiveValue("right", -100, -30);
+  }
+
+  // .features__tourists
+
+  &__tourists {
+    top: 50%;
+    @include adaptiveValue("left", -100, -30);
+  }
+
+  // .features__hotels
+
+  &__hotels {
+    @include adaptiveValue("right", -100, -30);
+    @include adaptiveValue("bottom", 143, 80);
+  }
+}
+
+//PAGE DESTINATION
+.page-destination {
+  background-color: $backgroundColor;
+  padding-bottom: rem(120);
+}
+.destination-block {
+  // .destination-block__container
+
+  &__container {
+  }
+
+  // .destination-block__title
+
+  &__title {
+    padding-top: rem(120);
+    padding-bottom: rem(40);
+  }
+
+  // .destination-block__content
+
+  &__content {
+  }
+
+  // .destination-block__destination-type
+
+  &__destination-type {
+  }
+
+  // .destination-block__place
+
+  &__place {
+  }
+}
+.destination-type {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-bottom: rem(40);
+  overflow: hidden;
+  height: rem(46);
+
+  // .destination-type__wrapper
+
+  &__wrapper {
+    position: relative;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
+    ul {
+      list-style-type: none;
+      display: flex;
+    }
+  }
+
+  // .destination-type__nav
+
+  &__nav {
+    overflow: hidden;
+    li {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex: 1 1 100%;
+    }
+  }
+
+  // .destination-type__btn
+  &__btn {
+    flex-grow: 1;
+  }
+  &__btn.description__btn-active {
+    transition: color 0.4s ease-in-out;
+    color: $primaryBlue;
+  }
+
+  // .destination-type__slider
+
+  &__slider {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  // .destination-type__slider-rect
+  :root {
+    --translate-destination-filters-slider: 0;
+  }
+  &__slider-rect {
+    @include adaptiveValue("height", 46, 35);
+    width: 35%;
+    border-radius: rem(10);
+    background-color: $mainLightColor;
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(var(--translate-destination-filters-slider));
+  }
+}
+.place {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  gap: rem(20);
+  .hide {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+  // .place__card
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: rem(280);
+    height: rem(293);
+    background: $mainLightColor;
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.1);
+    border-radius: rem(25);
+    animation: 1s ease-in-out fadeIn;
+  }
+
+  // .place__head
+
+  &__head {
+    margin-top: rem(10);
+    position: relative;
+  }
+
+  // .place__img
+
+  &__img {
+    @include adaptiveValue("width", 260, 250);
+    height: rem(200);
+    border-radius: rem(25);
+  }
+
+  // .place__rating
+
+  &__rating {
+    top: rem(15);
+    right: rem(15);
+  }
+
+  // .place__body
+
+  &__body {
+    width: rem(220);
+    padding-top: rem(20);
+    padding-bottom: rem(5);
+    text-align: left;
+    float: left;
+  }
+
+  // .place__name
+
+  &__name {
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: math.div(27, 18);
+    color: $mainColor;
+  }
+
+  // .place__location
+
+  &__location {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: math.div(21, 14);
+    color: $secondaryTextColor;
+    &::before {
+      content: url(@img/svg/location.svg);
+      vertical-align: middle;
+    }
+  }
+}
+
+//PAGE COMMENTS
+.page-comments {
+  padding-top: rem(140);
+  background-color: $backgroundColor;
+}
+.comments-block {
+  // .comments-block__container
+
+  &__container {
+    padding-bottom: rem(56);
+  }
+
+  // .comments-block__slider
+
+  &__slider {
+  }
+
+  // .comments-block__comment
+
+  &__comment {
+  }
+}
+.slider {
+  position: relative;
+  // .slider__wrapper
+
+  &__wrapper {
+  }
+  &__item {
+  }
+  // .slider__buttons
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: rem(30);
+    gap: rem(20);
+  }
+}
+.comment {
+  @include adaptiveValue("width", 580, 280);
+  @include adaptiveValue("height", 465, 600);
+  text-align: center;
+
+  font-weight: 500;
+  @include adaptiveValue("font-size", 20, 16);
+  line-height: math.div(42, 20);
+  // .comment__wrapper
+
+  &__wrapper {
+    position: relative;
+    margin: auto;
+    @include adaptiveValue("width", 580, 280);
+    @include adaptiveValue("height", 410, 450);
+    background-color: $mainLightColor;
+    border-radius: rem(50);
+  }
+
+  // .comment__quotes
+
+  &__quotes {
+    position: absolute;
+    z-index: 1;
+    width: rem(131);
+    height: rem(104);
+    right: 50%;
+    margin-right: rem(-65);
+    top: rem(36);
+  }
+
+  // .comment__text
+
+  &__text {
+    @include adaptiveValue("width", 508, 240);
+    margin: auto;
+    padding-top: rem(70);
+    padding-bottom: rem(10);
+    color: $mainColor;
+  }
+
+  // .comment__commentator-name
+
+  &__commentator-name {
+    color: $primaryBlue;
+  }
+
+  // .comment__web-site
+
+  &__web-site {
+    color: $secondaryTextColor;
+  }
+
+  // .comment__commentator
+
+  &__commentator {
+    position: absolute;
+    @include adaptiveValue("width", 180, 140);
+    @include adaptiveValue("height", 135, 100);
+    left: 50%;
+    @include adaptiveValue("bottom", -55, -40);
+    @include adaptiveValue("margin-left", -90, -70);
+    border-radius: 50%;
+    background-color: $mainLightColor;
+  }
+  // .comment__commentator-img
+
+  &__commentator-img {
+    @include adaptiveValue("width", 100, 90);
+    @include adaptiveValue("height", 100, 90);
+    margin: auto;
+  }
+  &__rating {
+    top: rem(10);
+    @include adaptiveValue("right", 10, 5);
+  }
+}
+.slick {
+  &-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(40);
+    height: rem(40);
+    border: 2px solid rgba(62, 134, 245, 0.5);
+    border-radius: rem(15);
+    transition: all 0.35s ease;
+    svg {
+      stroke: $primaryBlue;
+    }
+    &:hover {
+      background-color: $primaryBlue;
+      svg {
+        stroke: $mainLightColor;
+      }
+    }
+  }
+}
+
+//PAGE DISCOUNT
+.page-discount {
+  padding-top: rem(80);
+  padding-bottom: rem(120);
+  background-color: $backgroundColor;
+}
+.discount-block {
+  // .discount-block__container
+
+  &__container {
+  }
+
+  // .discount-block__content
+
+  &__content {
+    @include adaptiveValue("width", 1180, 280);
+    @include adaptiveValue("height", 500, 300);
+    @include adaptiveValue(" border-radius", 100, 80);
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(@img/discount_bg.jpg);
+  }
+
+  // .discount-block__title
+
+  &__title {
+    margin: auto;
+    @include adaptiveValue("padding-top", 115, 60);
+    @include adaptiveValue("width", 743, 260);
+    @include adaptiveValue("font-size", 48, 22);
+    color: $mainLightColor;
+  }
+
+  // .discount-block__btn
+
+  &__btn {
+    margin-top: rem(40);
+    color: $primaryBlue;
+    background-color: $mainLightColor;
+    transition: all 0.3s linear;
+    &:hover {
+      color: $mainLightColor;
+      background-color: $primaryBlue;
+    }
+  }
+}
